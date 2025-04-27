@@ -1,0 +1,737 @@
+@prefix : <http://example.org/def/base#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://example.org/def/base#> .
+
+<http://example.org/def/base#> rdf:type owl:Ontology ;
+                                owl:backwardCompatibleWith <https://w3id.org/example/1.0.0> ;
+                                owl:incompatibleWith <https://w3id.org/example/0.2.0> ;
+                                owl:priorVersion <https://w3id.org/example/1.0.0> ;
+                                owl:versionInfo "0.0.1" ;
+                                <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2000/01/rdf-schema#sameAs
+rdfs:sameAs rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#backwardCompatibleWith
+owl:backwardCompatibleWith rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#incompatibleWith
+owl:incompatibleWith rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#priorVersion
+owl:priorVersion rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#versionInfo
+owl:versionInfo rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mod#createdWith
+<https://w3id.org/mod#createdWith> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://example.org/def/base#has_City
+:has_City rdf:type owl:ObjectProperty ;
+          owl:inverseOf <http://www.owl-ontologies.com/rito#hasAttraction> ,
+                        <http://www.owl-ontologies.com/rito#hasEvent> ,
+                        <http://www.owl-ontologies.com/rito#hasHotel> ,
+                        <http://www.owl-ontologies.com/rito#hasRestaurant> ,
+                        <http://www.owl-ontologies.com/rito#hasTransport> ;
+          rdf:type owl:FunctionalProperty .
+
+
+###  http://www.owl-ontologies.com/rito#hasAttraction
+<http://www.owl-ontologies.com/rito#hasAttraction> rdf:type owl:ObjectProperty ,
+                                                            owl:FunctionalProperty ,
+                                                            owl:InverseFunctionalProperty ;
+                                                   rdfs:domain <http://www.owl-ontologies.com/rito#City> ;
+                                                   rdfs:range <http://www.owl-ontologies.com/rito#Attraction> ;
+                                                   rdfs:comment "an attraction in that city" ;
+                                                   rdfs:label "has attraction" .
+
+
+###  http://www.owl-ontologies.com/rito#hasEvent
+<http://www.owl-ontologies.com/rito#hasEvent> rdf:type owl:ObjectProperty ,
+                                                       owl:FunctionalProperty ,
+                                                       owl:InverseFunctionalProperty ;
+                                              rdfs:domain <http://www.owl-ontologies.com/rito#City> ;
+                                              rdfs:range <http://www.owl-ontologies.com/rito#Event> ;
+                                              rdfs:comment "an event in that city" ;
+                                              rdfs:label "has event" .
+
+
+###  http://www.owl-ontologies.com/rito#hasHotel
+<http://www.owl-ontologies.com/rito#hasHotel> rdf:type owl:ObjectProperty ,
+                                                       owl:FunctionalProperty ,
+                                                       owl:InverseFunctionalProperty ;
+                                              rdfs:domain <http://www.owl-ontologies.com/rito#City> ;
+                                              rdfs:range <http://www.owl-ontologies.com/rito#Hotel> ;
+                                              rdfs:comment "a hotel in that city" ;
+                                              rdfs:label "has hotel" .
+
+
+###  http://www.owl-ontologies.com/rito#hasRestaurant
+<http://www.owl-ontologies.com/rito#hasRestaurant> rdf:type owl:ObjectProperty ,
+                                                            owl:FunctionalProperty ,
+                                                            owl:InverseFunctionalProperty ;
+                                                   rdfs:domain <http://www.owl-ontologies.com/rito#City> ;
+                                                   rdfs:range <http://www.owl-ontologies.com/rito#Restaurant> ;
+                                                   rdfs:comment "a restaurant in that city" ;
+                                                   rdfs:label "has restaurant" .
+
+
+###  http://www.owl-ontologies.com/rito#hasTransport
+<http://www.owl-ontologies.com/rito#hasTransport> rdf:type owl:ObjectProperty ,
+                                                           owl:FunctionalProperty ,
+                                                           owl:InverseFunctionalProperty ;
+                                                  rdfs:domain <http://www.owl-ontologies.com/rito#City> ;
+                                                  rdfs:range <http://www.owl-ontologies.com/rito#Transport> ;
+                                                  rdfs:comment "a transport service in that city" ;
+                                                  rdfs:label "has transport" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.owl-ontologies.com/rito#attId
+<http://www.owl-ontologies.com/rito#attId> rdf:type owl:DatatypeProperty ,
+                                                    owl:FunctionalProperty ;
+                                           rdfs:domain <http://www.owl-ontologies.com/rito#Attraction> ;
+                                           rdfs:range xsd:int ;
+                                           rdfs:comment "identificative number of the attraction" ;
+                                           rdfs:label "attr id" .
+
+
+###  http://www.owl-ontologies.com/rito#attrName
+<http://www.owl-ontologies.com/rito#attrName> rdf:type owl:DatatypeProperty ,
+                                                       owl:FunctionalProperty ;
+                                              rdfs:domain <http://www.owl-ontologies.com/rito#Attraction> ;
+                                              rdfs:range xsd:string ;
+                                              rdfs:comment "attraction's name" ;
+                                              rdfs:label "attr name" .
+
+
+###  http://www.owl-ontologies.com/rito#attrRating
+<http://www.owl-ontologies.com/rito#attrRating> rdf:type owl:DatatypeProperty ,
+                                                         owl:FunctionalProperty ;
+                                                rdfs:domain <http://www.owl-ontologies.com/rito#Attraction> ;
+                                                rdfs:range xsd:decimal ;
+                                                rdfs:comment "rating of the attraction" ;
+                                                rdfs:label "attr rating" .
+
+
+###  http://www.owl-ontologies.com/rito#averagePrice
+<http://www.owl-ontologies.com/rito#averagePrice> rdf:type owl:DatatypeProperty ,
+                                                           owl:FunctionalProperty ;
+                                                  rdfs:domain <http://www.owl-ontologies.com/rito#Transport> ;
+                                                  rdfs:range xsd:decimal ;
+                                                  rdfs:comment "average price of the transport" ;
+                                                  rdfs:label "average price" .
+
+
+###  http://www.owl-ontologies.com/rito#cityId
+<http://www.owl-ontologies.com/rito#cityId> rdf:type owl:DatatypeProperty ,
+                                                     owl:FunctionalProperty ;
+                                            rdfs:domain <http://www.owl-ontologies.com/rito#City> ;
+                                            rdfs:range xsd:int ;
+                                            rdfs:comment "identificative number of the city" ;
+                                            rdfs:label "city id" .
+
+
+###  http://www.owl-ontologies.com/rito#cityName
+<http://www.owl-ontologies.com/rito#cityName> rdf:type owl:DatatypeProperty ,
+                                                       owl:FunctionalProperty ;
+                                              rdfs:domain <http://www.owl-ontologies.com/rito#City> ;
+                                              rdfs:range xsd:string ;
+                                              rdfs:comment "city's name" ;
+                                              rdfs:label "city name" .
+
+
+###  http://www.owl-ontologies.com/rito#company
+<http://www.owl-ontologies.com/rito#company> rdf:type owl:DatatypeProperty ,
+                                                      owl:FunctionalProperty ;
+                                             rdfs:domain <http://www.owl-ontologies.com/rito#Transport> ;
+                                             rdfs:range xsd:string ;
+                                             rdfs:comment "Transport Company Name" ;
+                                             rdfs:label "company" .
+
+
+###  http://www.owl-ontologies.com/rito#eventDate
+<http://www.owl-ontologies.com/rito#eventDate> rdf:type owl:DatatypeProperty ,
+                                                        owl:FunctionalProperty ;
+                                               rdfs:domain <http://www.owl-ontologies.com/rito#Event> ;
+                                               rdfs:range xsd:dateTime ;
+                                               rdfs:comment "The date of an event" ;
+                                               rdfs:label "event date" .
+
+
+###  http://www.owl-ontologies.com/rito#eventId
+<http://www.owl-ontologies.com/rito#eventId> rdf:type owl:DatatypeProperty ,
+                                                      owl:FunctionalProperty ;
+                                             rdfs:domain <http://www.owl-ontologies.com/rito#Event> ;
+                                             rdfs:range xsd:int ;
+                                             rdfs:comment "identificative number of the event" ;
+                                             rdfs:label "event id" .
+
+
+###  http://www.owl-ontologies.com/rito#eventName
+<http://www.owl-ontologies.com/rito#eventName> rdf:type owl:DatatypeProperty ,
+                                                        owl:FunctionalProperty ;
+                                               rdfs:domain <http://www.owl-ontologies.com/rito#Event> ;
+                                               rdfs:range xsd:string ;
+                                               rdfs:comment "event's name" ;
+                                               rdfs:label "event name" .
+
+
+###  http://www.owl-ontologies.com/rito#hotelId
+<http://www.owl-ontologies.com/rito#hotelId> rdf:type owl:DatatypeProperty ,
+                                                      owl:FunctionalProperty ;
+                                             rdfs:domain <http://www.owl-ontologies.com/rito#Hotel> ;
+                                             rdfs:range xsd:int ;
+                                             rdfs:comment "identificative number of the hotel" ;
+                                             rdfs:label "hotel id" .
+
+
+###  http://www.owl-ontologies.com/rito#hotelName
+<http://www.owl-ontologies.com/rito#hotelName> rdf:type owl:DatatypeProperty ,
+                                                        owl:FunctionalProperty ;
+                                               rdfs:domain <http://www.owl-ontologies.com/rito#Hotel> ;
+                                               rdfs:range xsd:string ;
+                                               rdfs:comment "The name of the hotel" ;
+                                               rdfs:label "hotel name" .
+
+
+###  http://www.owl-ontologies.com/rito#hotelPrice
+<http://www.owl-ontologies.com/rito#hotelPrice> rdf:type owl:DatatypeProperty ,
+                                                         owl:FunctionalProperty ;
+                                                rdfs:domain <http://www.owl-ontologies.com/rito#Hotel> ;
+                                                rdfs:range xsd:int ;
+                                                rdfs:comment "Average price of the hotel" ;
+                                                rdfs:label "hotel price" .
+
+
+###  http://www.owl-ontologies.com/rito#hotelRating
+<http://www.owl-ontologies.com/rito#hotelRating> rdf:type owl:DatatypeProperty ,
+                                                          owl:FunctionalProperty ;
+                                                 rdfs:domain <http://www.owl-ontologies.com/rito#Hotel> ;
+                                                 rdfs:range xsd:float ;
+                                                 rdfs:comment "Rating of the hotel's service" ;
+                                                 rdfs:label "hotel rating" .
+
+
+###  http://www.owl-ontologies.com/rito#location
+<http://www.owl-ontologies.com/rito#location> rdf:type owl:DatatypeProperty ,
+                                                       owl:FunctionalProperty ;
+                                              rdfs:domain <http://www.owl-ontologies.com/rito#City> ;
+                                              rdfs:range xsd:string ;
+                                              rdfs:comment "Location of a city" ;
+                                              rdfs:label "location" .
+
+
+###  http://www.owl-ontologies.com/rito#restName
+<http://www.owl-ontologies.com/rito#restName> rdf:type owl:DatatypeProperty ,
+                                                       owl:FunctionalProperty ;
+                                              rdfs:domain <http://www.owl-ontologies.com/rito#Restaurant> ;
+                                              rdfs:range xsd:string ;
+                                              rdfs:comment "restaurant's name" ;
+                                              rdfs:label "rest name" .
+
+
+###  http://www.owl-ontologies.com/rito#restPrice
+<http://www.owl-ontologies.com/rito#restPrice> rdf:type owl:DatatypeProperty ,
+                                                        owl:FunctionalProperty ;
+                                               rdfs:domain <http://www.owl-ontologies.com/rito#Restaurant> ;
+                                               rdfs:range xsd:int ;
+                                               rdfs:comment "Average price of a restaurant" ;
+                                               rdfs:label "rest price" .
+
+
+###  http://www.owl-ontologies.com/rito#restRating
+<http://www.owl-ontologies.com/rito#restRating> rdf:type owl:DatatypeProperty ,
+                                                         owl:FunctionalProperty ;
+                                                rdfs:domain <http://www.owl-ontologies.com/rito#Restaurant> ;
+                                                rdfs:range xsd:decimal ;
+                                                rdfs:comment "Restaurant's rating" ;
+                                                rdfs:label "rest rating" .
+
+
+###  http://www.owl-ontologies.com/rito#restiid
+<http://www.owl-ontologies.com/rito#restiid> rdf:type owl:DatatypeProperty ,
+                                                      owl:FunctionalProperty ;
+                                             rdfs:domain <http://www.owl-ontologies.com/rito#Restaurant> ;
+                                             rdfs:range xsd:int ;
+                                             rdfs:comment "identificative number of the restaurant" ;
+                                             rdfs:label "rest id" .
+
+
+###  http://www.owl-ontologies.com/rito#stars
+<http://www.owl-ontologies.com/rito#stars> rdf:type owl:DatatypeProperty ,
+                                                    owl:FunctionalProperty ;
+                                           rdfs:domain <http://www.owl-ontologies.com/rito#Hotel> ;
+                                           rdfs:range xsd:int ;
+                                           rdfs:comment "Number of stars of an hotel" ;
+                                           rdfs:label "stars" .
+
+
+###  http://www.owl-ontologies.com/rito#tranId
+<http://www.owl-ontologies.com/rito#tranId> rdf:type owl:DatatypeProperty ,
+                                                     owl:FunctionalProperty ;
+                                            rdfs:domain <http://www.owl-ontologies.com/rito#Transport> ;
+                                            rdfs:range xsd:int ;
+                                            rdfs:comment "identificative number of the transport" ;
+                                            rdfs:label "tran id" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://example.org/def/base#RecomendedAttraction
+:RecomendedAttraction rdf:type owl:Class ;
+                      rdfs:subClassOf <http://www.owl-ontologies.com/rito#Attraction> ;
+                      rdfs:comment "Recomended by rules" ;
+                      rdfs:label "recomendedAttraction" .
+
+
+###  http://example.org/def/base#RecomendedHotel
+:RecomendedHotel rdf:type owl:Class ;
+                 rdfs:subClassOf <http://www.owl-ontologies.com/rito#Hotel> ;
+                 rdfs:comment "Recomended by rules" ;
+                 rdfs:label "RecomendedHotel" .
+
+
+###  http://example.org/def/base#RecomendedRestaurant
+:RecomendedRestaurant rdf:type owl:Class ;
+                      rdfs:subClassOf <http://www.owl-ontologies.com/rito#Restaurant> ;
+                      rdfs:comment "Recomended by rules" ;
+                      rdfs:label "RecomendedRestaurant" .
+
+
+###  http://www.owl-ontologies.com/rito#AndalusiRestaurant
+<http://www.owl-ontologies.com/rito#AndalusiRestaurant> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://www.owl-ontologies.com/rito#Restaurant> ;
+                                                        rdfs:comment "A restaurant of andalusi food with any special interest" ;
+                                                        rdfs:label "Andalusi Restaurant" .
+
+
+###  http://www.owl-ontologies.com/rito#Attraction
+<http://www.owl-ontologies.com/rito#Attraction> rdf:type owl:Class ;
+                                                rdfs:comment "Something with special interest in a city" ;
+                                                rdfs:label "Attraction" .
+
+
+###  http://www.owl-ontologies.com/rito#Beach
+<http://www.owl-ontologies.com/rito#Beach> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://www.owl-ontologies.com/rito#Attraction> ;
+                                           rdfs:comment "Something with special interest in a city" ;
+                                           rdfs:label "Beach" .
+
+
+###  http://www.owl-ontologies.com/rito#BeachHotel
+<http://www.owl-ontologies.com/rito#BeachHotel> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://www.owl-ontologies.com/rito#Hotel> ;
+                                                rdfs:comment "An hotel located near a beach" ;
+                                                rdfs:label "Beach Hotel" .
+
+
+###  http://www.owl-ontologies.com/rito#BikeSharing
+<http://www.owl-ontologies.com/rito#BikeSharing> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://www.owl-ontologies.com/rito#Transport> ;
+                                                 rdfs:comment "Rellevant bikesharing service in a city" ;
+                                                 rdfs:label "Bike Sharing" .
+
+
+###  http://www.owl-ontologies.com/rito#Bus
+<http://www.owl-ontologies.com/rito#Bus> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://www.owl-ontologies.com/rito#Transport> ;
+                                         rdfs:comment "Rellevant bus service in a city" ;
+                                         rdfs:label "Bus" .
+
+
+###  http://www.owl-ontologies.com/rito#BusinessHotel
+<http://www.owl-ontologies.com/rito#BusinessHotel> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://www.owl-ontologies.com/rito#Hotel> ;
+                                                   rdfs:comment "An hotel located near a special busines place" ;
+                                                   rdfs:label "Business Hotel" .
+
+
+###  http://www.owl-ontologies.com/rito#City
+<http://www.owl-ontologies.com/rito#City> rdf:type owl:Class ;
+                                          rdfs:comment "A city with several special places." ;
+                                          rdfs:label "City" ;
+                                          rdfs:sameAs "https://dbpedia.org/ontology/AdministrativeRegion" .
+
+
+###  http://www.owl-ontologies.com/rito#Cultural
+<http://www.owl-ontologies.com/rito#Cultural> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://www.owl-ontologies.com/rito#Attraction> ;
+                                              rdfs:comment "Something with relevant cultural interest" ;
+                                              rdfs:label "Cultural" .
+
+
+###  http://www.owl-ontologies.com/rito#CulturalEvent
+<http://www.owl-ontologies.com/rito#CulturalEvent> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://www.owl-ontologies.com/rito#Event> ;
+                                                   rdfs:comment "An event with special cultural interest" ;
+                                                   rdfs:label "Cultural Event" .
+
+
+###  http://www.owl-ontologies.com/rito#Event
+<http://www.owl-ontologies.com/rito#Event> rdf:type owl:Class ;
+                                           owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://www.owl-ontologies.com/rito#eventDate> ;
+                                                                 owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                 owl:onDataRange xsd:dateTime
+                                                               ] ;
+                                           rdfs:comment "An event with special interest" ;
+                                           rdfs:label "Event" .
+
+
+###  http://www.owl-ontologies.com/rito#GastroEvent
+<http://www.owl-ontologies.com/rito#GastroEvent> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://www.owl-ontologies.com/rito#Event> ;
+                                                 rdfs:comment "An event with special gastronomic interest" ;
+                                                 rdfs:label "Gastro Event" .
+
+
+###  http://www.owl-ontologies.com/rito#Hotel
+<http://www.owl-ontologies.com/rito#Hotel> rdf:type owl:Class ;
+                                           owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://www.owl-ontologies.com/rito#hotelRating> ;
+                                                                 owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                 owl:onDataRange xsd:float
+                                                               ] ;
+                                           rdfs:comment "A hotel in a city" ;
+                                           rdfs:label "Hotel" .
+
+
+###  http://www.owl-ontologies.com/rito#ItalianRestaurant
+<http://www.owl-ontologies.com/rito#ItalianRestaurant> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://www.owl-ontologies.com/rito#Restaurant> ;
+                                                       rdfs:comment "A restaurant of italian food with any special interest" ;
+                                                       rdfs:label "Italian Restaurant" .
+
+
+###  http://www.owl-ontologies.com/rito#JapanRestaurant
+<http://www.owl-ontologies.com/rito#JapanRestaurant> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://www.owl-ontologies.com/rito#Restaurant> ;
+                                                     rdfs:comment "A restaurant of japanese food with any special interest" ;
+                                                     rdfs:label "Japan Restaurant" .
+
+
+###  http://www.owl-ontologies.com/rito#LuxuryHotel
+<http://www.owl-ontologies.com/rito#LuxuryHotel> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://www.owl-ontologies.com/rito#Hotel> ;
+                                                 rdfs:comment "An hotel specially luxury" ;
+                                                 rdfs:label "Luxury Hotel" .
+
+
+###  http://www.owl-ontologies.com/rito#MediterraneanRestaurant
+<http://www.owl-ontologies.com/rito#MediterraneanRestaurant> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://www.owl-ontologies.com/rito#Restaurant> ;
+                                                             rdfs:comment "A restaurant of mediterranean food with any special interest" ;
+                                                             rdfs:label "Mediterranean Restaurant" .
+
+
+###  http://www.owl-ontologies.com/rito#Metro
+<http://www.owl-ontologies.com/rito#Metro> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://www.owl-ontologies.com/rito#Transport> ;
+                                           rdfs:comment "Rellevant metro service in a city" ;
+                                           rdfs:label "Metro" .
+
+
+###  http://www.owl-ontologies.com/rito#MexicanRestaurant
+<http://www.owl-ontologies.com/rito#MexicanRestaurant> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://www.owl-ontologies.com/rito#Restaurant> ;
+                                                       rdfs:comment "A restaurant of mexican food with any special interest" ;
+                                                       rdfs:label "Mexican Restaurant" .
+
+
+###  http://www.owl-ontologies.com/rito#Monument
+<http://www.owl-ontologies.com/rito#Monument> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://www.owl-ontologies.com/rito#Attraction> ;
+                                              rdfs:comment "A monument in a city" ;
+                                              rdfs:label "Monument" .
+
+
+###  http://www.owl-ontologies.com/rito#Museum
+<http://www.owl-ontologies.com/rito#Museum> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://www.owl-ontologies.com/rito#Attraction> ;
+                                            rdfs:comment "A museum in a city" ;
+                                            rdfs:label "Museum" .
+
+
+###  http://www.owl-ontologies.com/rito#MusicEvent
+<http://www.owl-ontologies.com/rito#MusicEvent> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://www.owl-ontologies.com/rito#Event> ;
+                                                rdfs:comment "An event with special music interest" ;
+                                                rdfs:label "Music Event" .
+
+
+###  http://www.owl-ontologies.com/rito#Park
+<http://www.owl-ontologies.com/rito#Park> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://www.owl-ontologies.com/rito#Attraction> ;
+                                          rdfs:comment "A park in a city" ;
+                                          rdfs:label "Park" .
+
+
+###  http://www.owl-ontologies.com/rito#Restaurant
+<http://www.owl-ontologies.com/rito#Restaurant> rdf:type owl:Class ;
+                                                rdfs:comment "A restaurant with any special interest" ;
+                                                rdfs:label "Restaurant" ;
+                                                rdfs:sameAs "https://dbpedia.org/page/Restaurant" .
+
+
+###  http://www.owl-ontologies.com/rito#Ruralhotel
+<http://www.owl-ontologies.com/rito#Ruralhotel> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://www.owl-ontologies.com/rito#Hotel> ;
+                                                rdfs:comment "An hotel located near a rural zone" ;
+                                                rdfs:label "Ruralhotel" .
+
+
+###  http://www.owl-ontologies.com/rito#SportEvent
+<http://www.owl-ontologies.com/rito#SportEvent> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://www.owl-ontologies.com/rito#Event> ;
+                                                rdfs:comment "An event with special sport interest" ;
+                                                rdfs:label "Sport Event" .
+
+
+###  http://www.owl-ontologies.com/rito#Taxi
+<http://www.owl-ontologies.com/rito#Taxi> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://www.owl-ontologies.com/rito#Transport> ;
+                                          rdfs:comment "Rellevant taxi service in a city" ;
+                                          rdfs:label "Taxi" .
+
+
+###  http://www.owl-ontologies.com/rito#TechEvent
+<http://www.owl-ontologies.com/rito#TechEvent> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://www.owl-ontologies.com/rito#Event> ;
+                                               rdfs:comment "An event with special technological interest" ;
+                                               rdfs:label "Tech Event" .
+
+
+###  http://www.owl-ontologies.com/rito#TourismHotel
+<http://www.owl-ontologies.com/rito#TourismHotel> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://www.owl-ontologies.com/rito#Hotel> ;
+                                                  rdfs:comment "An hotel located close to serveal tourist places" ;
+                                                  rdfs:label "Tourism Hotel" .
+
+
+###  http://www.owl-ontologies.com/rito#Tram
+<http://www.owl-ontologies.com/rito#Tram> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://www.owl-ontologies.com/rito#Transport> ;
+                                          rdfs:comment "Rellevant tram service in a city" ;
+                                          rdfs:label "Tram" .
+
+
+###  http://www.owl-ontologies.com/rito#Transport
+<http://www.owl-ontologies.com/rito#Transport> rdf:type owl:Class ;
+                                               rdfs:comment "Rellevant transport in a city" ;
+                                               rdfs:label "Transport" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://example.org/def/base#Catedral_Màlaga
+:Catedral_Màlaga rdf:type owl:NamedIndividual ,
+                          <http://www.owl-ontologies.com/rito#Park> ;
+                 :has_City <http://www.owl-ontologies.com/rito#Màlaga> ;
+                 <http://www.owl-ontologies.com/rito#attId> 21 ;
+                 <http://www.owl-ontologies.com/rito#attrName> "Catedral Màlaga" ;
+                 <http://www.owl-ontologies.com/rito#attrRating> 4.4 .
+
+
+###  http://example.org/def/base#Fira_Màlaga
+:Fira_Màlaga rdf:type owl:NamedIndividual ,
+                      <http://www.owl-ontologies.com/rito#MusicEvent> ;
+             :has_City <http://www.owl-ontologies.com/rito#Màlaga> ;
+             <http://www.owl-ontologies.com/rito#hasEvent> :Fira_Màlaga ;
+             <http://www.owl-ontologies.com/rito#eventDate> "2024-12-22T00:00:00"^^xsd:dateTime ;
+             <http://www.owl-ontologies.com/rito#eventId> 8 ;
+             <http://www.owl-ontologies.com/rito#eventName> "Fira màlaga" .
+
+
+###  http://example.org/def/base#Hotel_Royal_Màlaga
+:Hotel_Royal_Màlaga rdf:type owl:NamedIndividual ,
+                             <http://www.owl-ontologies.com/rito#TourismHotel> ;
+                    :has_City <http://www.owl-ontologies.com/rito#Màlaga> ;
+                    <http://www.owl-ontologies.com/rito#hotelId> 3 ;
+                    <http://www.owl-ontologies.com/rito#hotelName> "Hotel Royal Màlaga" ;
+                    <http://www.owl-ontologies.com/rito#hotelPrice> 175 ;
+                    <http://www.owl-ontologies.com/rito#hotelRating> "4.4"^^xsd:float ;
+                    <http://www.owl-ontologies.com/rito#stars> 5 .
+
+
+###  http://example.org/def/base#Restaurant_Delicia_Màlaga
+:Restaurant_Delicia_Màlaga rdf:type owl:NamedIndividual ,
+                                    <http://www.owl-ontologies.com/rito#JapanRestaurant> ;
+                           <http://www.owl-ontologies.com/rito#restName> "Restaurant Delicia Màlaga" ;
+                           <http://www.owl-ontologies.com/rito#restPrice> 38 ;
+                           <http://www.owl-ontologies.com/rito#restRating> 4.5 ;
+                           <http://www.owl-ontologies.com/rito#restiid> 4 .
+
+
+###  http://example.org/def/base#Tramvia_Màlaga
+:Tramvia_Màlaga rdf:type owl:NamedIndividual ,
+                         <http://www.owl-ontologies.com/rito#Tram> ;
+                :has_City <http://www.owl-ontologies.com/rito#Màlaga> ;
+                <http://www.owl-ontologies.com/rito#averagePrice> 7.66 ;
+                <http://www.owl-ontologies.com/rito#company> "City Màlaga" ;
+                <http://www.owl-ontologies.com/rito#tranId> 16 .
+
+
+###  http://www.owl-ontologies.com/rito#Màlaga
+<http://www.owl-ontologies.com/rito#Màlaga> rdf:type owl:NamedIndividual ,
+                                                     <http://www.owl-ontologies.com/rito#City> ;
+                                            <http://www.owl-ontologies.com/rito#hasAttraction> :Catedral_Màlaga ;
+                                            <http://www.owl-ontologies.com/rito#hasEvent> :Fira_Màlaga ;
+                                            <http://www.owl-ontologies.com/rito#hasHotel> :Hotel_Royal_Màlaga ;
+                                            <http://www.owl-ontologies.com/rito#hasRestaurant> :Restaurant_Delicia_Màlaga ;
+                                            <http://www.owl-ontologies.com/rito#hasTransport> :Tramvia_Màlaga ;
+                                            <http://www.owl-ontologies.com/rito#cityId> 11 ;
+                                            <http://www.owl-ontologies.com/rito#cityName> "Màlaga" ;
+                                            <http://www.owl-ontologies.com/rito#location> "36.7213,-4.4210" ;
+                                            rdfs:comment "Instance of a city" ;
+                                            rdfs:label "Màlaga" ;
+                                            rdfs:sameAs "https://dbpedia.org/page/M%C3%A1laga" .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+<urn:swrl:var#a> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#r> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#h> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#re> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.owl-ontologies.com/rito#Hotel> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#h>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.owl-ontologies.com/rito#hotelRating> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#h> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#r>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <urn:swrl:var#r> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 4.5 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :RecomendedHotel ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#h>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.owl-ontologies.com/rito#Restaurant> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#re>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.owl-ontologies.com/rito#restRating> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#re> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#r>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <urn:swrl:var#r> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 4 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :RecomendedRestaurant ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#h>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.owl-ontologies.com/rito#Attraction> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#a>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.owl-ontologies.com/rito#attrRating> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#a> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#r>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <urn:swrl:var#r> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 3 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :RecomendedAttraction ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#a>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

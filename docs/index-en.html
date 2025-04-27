@@ -1,0 +1,2429 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>Responsible and Informated Tourism Ontology</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://example.org/def/base#","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://example.org/def/base#","name":"Responsible and Informated Tourism Ontology", "headline":"Document describing the ontology http://example.org/def/base#", "dateReleased":"Sat Apr 26 18:39:10 CEST 2025", "version":"0.0.1", "license":"null"}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>Responsible and Informated Tourism Ontology</h1>
+
+
+<dl>
+<dt>This version:</dt>
+<dd><a href="null">null</a></dd>
+<dt>Latest version:</dt>
+<dd><a href="http://example.org/def/base#">http://example.org/def/base#</a></dd>
+<dt>Previous version:</dt>
+<dd><a href="https://w3id.org/example/1.0.0">https://w3id.org/example/1.0.0</a></dd>
+<dt>Revision:</dt>
+<dd>0.0.1</dd>
+<dt>Issued on:</dt>
+<dd>Date issued</dd>
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="null" target="_blank"><img src="https://img.shields.io/badge/License-null-blue.svg" alt="null" /></a>
+<a href="null" rel="license" target="_blank">
+<img src="null" style="border-width:0" alt="License" />
+</a>
+<br/></dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>Revision: 0.0.1.</dd>
+<dt>Compatible with:</dt>
+<dd><a href="https://w3id.org/example/1.0.0">https://w3id.org/example/1.0.0</a></dd>
+</dl>
+
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+This is a placeholder text for the abstract. The abstract should contain a couple of sentences summarizing the ontology and its purpose.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">RITO: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#AndalusiRestaurant"
+         title="http://www.owl-ontologies.com/rito#AndalusiRestaurant">Andalusi Restaurant</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#Attraction" title="http://www.owl-ontologies.com/rito#Attraction">Attraction</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#Beach" title="http://www.owl-ontologies.com/rito#Beach">Beach</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#BeachHotel" title="http://www.owl-ontologies.com/rito#BeachHotel">Beach Hotel</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#BikeSharing" title="http://www.owl-ontologies.com/rito#BikeSharing">Bike Sharing</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#Bus" title="http://www.owl-ontologies.com/rito#Bus">Bus</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#BusinessHotel" title="http://www.owl-ontologies.com/rito#BusinessHotel">Business Hotel</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#City" title="http://www.owl-ontologies.com/rito#City">City</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#Cultural" title="http://www.owl-ontologies.com/rito#Cultural">Cultural</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#CulturalEvent" title="http://www.owl-ontologies.com/rito#CulturalEvent">Cultural Event</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#Event" title="http://www.owl-ontologies.com/rito#Event">Event</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#GastroEvent" title="http://www.owl-ontologies.com/rito#GastroEvent">Gastro Event</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#Hotel" title="http://www.owl-ontologies.com/rito#Hotel">Hotel</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#ItalianRestaurant"
+         title="http://www.owl-ontologies.com/rito#ItalianRestaurant">Italian Restaurant</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#JapanRestaurant"
+         title="http://www.owl-ontologies.com/rito#JapanRestaurant">Japan Restaurant</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#LuxuryHotel" title="http://www.owl-ontologies.com/rito#LuxuryHotel">Luxury Hotel</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#MediterraneanRestaurant"
+         title="http://www.owl-ontologies.com/rito#MediterraneanRestaurant">Mediterranean Restaurant</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#Metro" title="http://www.owl-ontologies.com/rito#Metro">Metro</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#MexicanRestaurant"
+         title="http://www.owl-ontologies.com/rito#MexicanRestaurant">Mexican Restaurant</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#Monument" title="http://www.owl-ontologies.com/rito#Monument">Monument</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#Museum" title="http://www.owl-ontologies.com/rito#Museum">Museum</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#MusicEvent" title="http://www.owl-ontologies.com/rito#MusicEvent">Music Event</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#Park" title="http://www.owl-ontologies.com/rito#Park">Park</a>
+   </li>
+   <li>
+      <a href="#RecomendedAttraction" title="http://example.org/def/base#RecomendedAttraction">recomendedAttraction</a>
+   </li>
+   <li>
+      <a href="#RecomendedHotel" title="http://example.org/def/base#RecomendedHotel">RecomendedHotel</a>
+   </li>
+   <li>
+      <a href="#RecomendedRestaurant" title="http://example.org/def/base#RecomendedRestaurant">RecomendedRestaurant</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#Restaurant" title="http://www.owl-ontologies.com/rito#Restaurant">Restaurant</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#Ruralhotel" title="http://www.owl-ontologies.com/rito#Ruralhotel">Ruralhotel</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#SportEvent" title="http://www.owl-ontologies.com/rito#SportEvent">Sport Event</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#Taxi" title="http://www.owl-ontologies.com/rito#Taxi">Taxi</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#TechEvent" title="http://www.owl-ontologies.com/rito#TechEvent">Tech Event</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#TourismHotel" title="http://www.owl-ontologies.com/rito#TourismHotel">Tourism Hotel</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#Tram" title="http://www.owl-ontologies.com/rito#Tram">Tram</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#Transport" title="http://www.owl-ontologies.com/rito#Transport">Transport</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#hasAttraction" title="http://www.owl-ontologies.com/rito#hasAttraction">has attraction</a>
+   </li>
+   <li>
+      <a href="#has_City" title="http://example.org/def/base#has_City">
+         <span>has City</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#hasEvent" title="http://www.owl-ontologies.com/rito#hasEvent">has event</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#hasHotel" title="http://www.owl-ontologies.com/rito#hasHotel">has hotel</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#hasRestaurant" title="http://www.owl-ontologies.com/rito#hasRestaurant">has restaurant</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#hasTransport" title="http://www.owl-ontologies.com/rito#hasTransport">has transport</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#attId" title="http://www.owl-ontologies.com/rito#attId">attr id</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#attrName" title="http://www.owl-ontologies.com/rito#attrName">attr name</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#attrRating" title="http://www.owl-ontologies.com/rito#attrRating">attr rating</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#averagePrice" title="http://www.owl-ontologies.com/rito#averagePrice">average price</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#cityId" title="http://www.owl-ontologies.com/rito#cityId">city id</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#cityName" title="http://www.owl-ontologies.com/rito#cityName">city name</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#company" title="http://www.owl-ontologies.com/rito#company">company</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#eventDate" title="http://www.owl-ontologies.com/rito#eventDate">event date</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#eventId" title="http://www.owl-ontologies.com/rito#eventId">event id</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#eventName" title="http://www.owl-ontologies.com/rito#eventName">event name</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#hotelId" title="http://www.owl-ontologies.com/rito#hotelId">hotel id</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#hotelName" title="http://www.owl-ontologies.com/rito#hotelName">hotel name</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#hotelPrice" title="http://www.owl-ontologies.com/rito#hotelPrice">hotel price</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#hotelRating" title="http://www.owl-ontologies.com/rito#hotelRating">hotel rating</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#location" title="http://www.owl-ontologies.com/rito#location">location</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#restiid" title="http://www.owl-ontologies.com/rito#restiid">rest id</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#restName" title="http://www.owl-ontologies.com/rito#restName">rest name</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#restPrice" title="http://www.owl-ontologies.com/rito#restPrice">rest price</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#restRating" title="http://www.owl-ontologies.com/rito#restRating">rest rating</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#stars" title="http://www.owl-ontologies.com/rito#stars">stars</a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#tranId" title="http://www.owl-ontologies.com/rito#tranId">tran id</a>
+   </li>
+</ul><h4>Annotation Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://www.w3.org/2002/07/owl#backwardCompatibleWith"
+         title="http://www.w3.org/2002/07/owl#backwardCompatibleWith">
+         <span>backward Compatible With</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/mod#createdWith" title="https://w3id.org/mod#createdWith">
+         <span>created With</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2002/07/owl#incompatibleWith" title="http://www.w3.org/2002/07/owl#incompatibleWith">
+         <span>incompatible With</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2002/07/owl#priorVersion" title="http://www.w3.org/2002/07/owl#priorVersion">
+         <span>prior Version</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2000/01/rdf-schema#sameAs" title="http://www.w3.org/2000/01/rdf-schema#sameAs">
+         <span>same As</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2002/07/owl#versionInfo" title="http://www.w3.org/2002/07/owl#versionInfo">
+         <span>version Info</span>
+      </a>
+   </li>
+</ul><h4>Named Individuals</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#Catedral_Màlaga" title="http://example.org/def/base#Catedral_Màlaga">
+         <span>Catedral Màlaga</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Fira_Màlaga" title="http://example.org/def/base#Fira_Màlaga">
+         <span>Fira Màlaga</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Hotel_Royal_Màlaga" title="http://example.org/def/base#Hotel_Royal_Màlaga">
+         <span>Hotel Royal Màlaga</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.owl-ontologies.com/rito#Màlaga" title="http://www.owl-ontologies.com/rito#Màlaga">Màlaga</a>
+   </li>
+   <li>
+      <a href="#Restaurant_Delicia_Màlaga"
+         title="http://example.org/def/base#Restaurant_Delicia_Màlaga">
+         <span>Restaurant Delicia Màlaga</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Tramvia_Màlaga" title="http://example.org/def/base#Tramvia_Màlaga">
+         <span>Tramvia Màlaga</span>
+      </a>
+   </li>
+</ul><h4> SWRL Rules </h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#d4e1173">Rule #1</a>
+   </li>
+   <li>
+      <a href="#d4e1285">Rule #2</a>
+   </li>
+   <li>
+      <a href="#d4e1398">Rule #3</a>
+   </li>
+</ul><iframe src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">RITO: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">Ontology with seveal information regarding cities and tourism facilities.</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for RITO classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by RITO.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#http://www.owl-ontologies.com/rito#AndalusiRestaurant" title="http://www.owl-ontologies.com/rito#AndalusiRestaurant">Andalusi Restaurant</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#Attraction" title="http://www.owl-ontologies.com/rito#Attraction">Attraction</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#Beach" title="http://www.owl-ontologies.com/rito#Beach">Beach</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#BeachHotel" title="http://www.owl-ontologies.com/rito#BeachHotel">Beach Hotel</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#BikeSharing" title="http://www.owl-ontologies.com/rito#BikeSharing">Bike Sharing</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#Bus" title="http://www.owl-ontologies.com/rito#Bus">Bus</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#BusinessHotel" title="http://www.owl-ontologies.com/rito#BusinessHotel">Business Hotel</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#City" title="http://www.owl-ontologies.com/rito#City">City</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#Cultural" title="http://www.owl-ontologies.com/rito#Cultural">Cultural</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#CulturalEvent" title="http://www.owl-ontologies.com/rito#CulturalEvent">Cultural Event</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#Event" title="http://www.owl-ontologies.com/rito#Event">Event</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#GastroEvent" title="http://www.owl-ontologies.com/rito#GastroEvent">Gastro Event</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#Hotel" title="http://www.owl-ontologies.com/rito#Hotel">Hotel</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#ItalianRestaurant" title="http://www.owl-ontologies.com/rito#ItalianRestaurant">Italian Restaurant</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#JapanRestaurant" title="http://www.owl-ontologies.com/rito#JapanRestaurant">Japan Restaurant</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#LuxuryHotel" title="http://www.owl-ontologies.com/rito#LuxuryHotel">Luxury Hotel</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#MediterraneanRestaurant" title="http://www.owl-ontologies.com/rito#MediterraneanRestaurant">Mediterranean Restaurant</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#Metro" title="http://www.owl-ontologies.com/rito#Metro">Metro</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#MexicanRestaurant" title="http://www.owl-ontologies.com/rito#MexicanRestaurant">Mexican Restaurant</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#Monument" title="http://www.owl-ontologies.com/rito#Monument">Monument</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#Museum" title="http://www.owl-ontologies.com/rito#Museum">Museum</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#MusicEvent" title="http://www.owl-ontologies.com/rito#MusicEvent">Music Event</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#Park" title="http://www.owl-ontologies.com/rito#Park">Park</a></li>
+  <li><a href="#RecomendedAttraction" title="http://example.org/def/base#RecomendedAttraction">recomendedAttraction</a></li>
+  <li><a href="#RecomendedHotel" title="http://example.org/def/base#RecomendedHotel">RecomendedHotel</a></li>
+  <li><a href="#RecomendedRestaurant" title="http://example.org/def/base#RecomendedRestaurant">RecomendedRestaurant</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#Restaurant" title="http://www.owl-ontologies.com/rito#Restaurant">Restaurant</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#Ruralhotel" title="http://www.owl-ontologies.com/rito#Ruralhotel">Ruralhotel</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#SportEvent" title="http://www.owl-ontologies.com/rito#SportEvent">Sport Event</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#Taxi" title="http://www.owl-ontologies.com/rito#Taxi">Taxi</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#TechEvent" title="http://www.owl-ontologies.com/rito#TechEvent">Tech Event</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#TourismHotel" title="http://www.owl-ontologies.com/rito#TourismHotel">Tourism Hotel</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#Tram" title="http://www.owl-ontologies.com/rito#Tram">Tram</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#Transport" title="http://www.owl-ontologies.com/rito#Transport">Transport</a></li>
+ </ul>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#AndalusiRestaurant">
+  <h3>Andalusi Restaurant<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#AndalusiRestaurant</p>
+  <div class="comment">
+   <span class="markdown">A restaurant of andalusi food with any special interest</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#Restaurant" title="http://www.owl-ontologies.com/rito#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#Attraction">
+  <h3>Attraction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#Attraction</p>
+  <div class="comment">
+   <span class="markdown">Something with special interest in a city</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#Beach" title="http://www.owl-ontologies.com/rito#Beach">Beach</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.owl-ontologies.com/rito#Cultural" title="http://www.owl-ontologies.com/rito#Cultural">Cultural</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.owl-ontologies.com/rito#Monument" title="http://www.owl-ontologies.com/rito#Monument">Monument</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.owl-ontologies.com/rito#Museum" title="http://www.owl-ontologies.com/rito#Museum">Museum</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.owl-ontologies.com/rito#Park" title="http://www.owl-ontologies.com/rito#Park">Park</a> <sup class="type-c" title="class">c</sup>, <a href="#RecomendedAttraction" title="http://example.org/def/base#RecomendedAttraction">recomendedAttraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#attId" title="http://www.owl-ontologies.com/rito#attId">attr id</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.owl-ontologies.com/rito#attrName" title="http://www.owl-ontologies.com/rito#attrName">attr name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.owl-ontologies.com/rito#attrRating" title="http://www.owl-ontologies.com/rito#attrRating">attr rating</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#hasAttraction" title="http://www.owl-ontologies.com/rito#hasAttraction">has attraction</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#Beach">
+  <h3>Beach<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#Beach</p>
+  <div class="comment">
+   <span class="markdown">Something with special interest in a city</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#Attraction" title="http://www.owl-ontologies.com/rito#Attraction">Attraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#BeachHotel">
+  <h3>Beach Hotel<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#BeachHotel</p>
+  <div class="comment">
+   <span class="markdown">An hotel located near a beach</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#Hotel" title="http://www.owl-ontologies.com/rito#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#BikeSharing">
+  <h3>Bike Sharing<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#BikeSharing</p>
+  <div class="comment">
+   <span class="markdown">Rellevant bikesharing service in a city</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#Transport" title="http://www.owl-ontologies.com/rito#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#Bus">
+  <h3>Bus<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#Bus</p>
+  <div class="comment">
+   <span class="markdown">Rellevant bus service in a city</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#Transport" title="http://www.owl-ontologies.com/rito#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#BusinessHotel">
+  <h3>Business Hotel<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#BusinessHotel</p>
+  <div class="comment">
+   <span class="markdown">An hotel located near a special busines place</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#Hotel" title="http://www.owl-ontologies.com/rito#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#City">
+  <h3>City<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#City</p>
+  <div class="comment">
+   <span class="markdown">A city with several special places.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#cityId" title="http://www.owl-ontologies.com/rito#cityId">city id</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.owl-ontologies.com/rito#cityName" title="http://www.owl-ontologies.com/rito#cityName">city name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.owl-ontologies.com/rito#hasAttraction" title="http://www.owl-ontologies.com/rito#hasAttraction">has attraction</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.owl-ontologies.com/rito#hasEvent" title="http://www.owl-ontologies.com/rito#hasEvent">has event</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.owl-ontologies.com/rito#hasHotel" title="http://www.owl-ontologies.com/rito#hasHotel">has hotel</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.owl-ontologies.com/rito#hasRestaurant" title="http://www.owl-ontologies.com/rito#hasRestaurant">has restaurant</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.owl-ontologies.com/rito#hasTransport" title="http://www.owl-ontologies.com/rito#hasTransport">has transport</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.owl-ontologies.com/rito#location" title="http://www.owl-ontologies.com/rito#location">location</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#Màlaga" title="http://www.owl-ontologies.com/rito#Màlaga">Màlaga</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#Cultural">
+  <h3>Cultural<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#Cultural</p>
+  <div class="comment">
+   <span class="markdown">Something with relevant cultural interest</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#Attraction" title="http://www.owl-ontologies.com/rito#Attraction">Attraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#CulturalEvent">
+  <h3>Cultural Event<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#CulturalEvent</p>
+  <div class="comment">
+   <span class="markdown">An event with special cultural interest</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#Event" title="http://www.owl-ontologies.com/rito#Event">Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#Event">
+  <h3>Event<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#Event</p>
+  <div class="comment">
+   <span class="markdown">An event with special interest</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#eventDate" title="http://www.owl-ontologies.com/rito#eventDate">event date</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">min</span> 1
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#CulturalEvent" title="http://www.owl-ontologies.com/rito#CulturalEvent">Cultural Event</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.owl-ontologies.com/rito#GastroEvent" title="http://www.owl-ontologies.com/rito#GastroEvent">Gastro Event</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.owl-ontologies.com/rito#MusicEvent" title="http://www.owl-ontologies.com/rito#MusicEvent">Music Event</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.owl-ontologies.com/rito#SportEvent" title="http://www.owl-ontologies.com/rito#SportEvent">Sport Event</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.owl-ontologies.com/rito#TechEvent" title="http://www.owl-ontologies.com/rito#TechEvent">Tech Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#eventDate" title="http://www.owl-ontologies.com/rito#eventDate">event date</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.owl-ontologies.com/rito#eventId" title="http://www.owl-ontologies.com/rito#eventId">event id</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.owl-ontologies.com/rito#eventName" title="http://www.owl-ontologies.com/rito#eventName">event name</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#hasEvent" title="http://www.owl-ontologies.com/rito#hasEvent">has event</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#GastroEvent">
+  <h3>Gastro Event<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#GastroEvent</p>
+  <div class="comment">
+   <span class="markdown">An event with special gastronomic interest</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#Event" title="http://www.owl-ontologies.com/rito#Event">Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#Hotel">
+  <h3>Hotel<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#Hotel</p>
+  <div class="comment">
+   <span class="markdown">A hotel in a city</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#hotelRating" title="http://www.owl-ontologies.com/rito#hotelRating">hotel rating</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">min</span> 1
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#BeachHotel" title="http://www.owl-ontologies.com/rito#BeachHotel">Beach Hotel</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.owl-ontologies.com/rito#BusinessHotel" title="http://www.owl-ontologies.com/rito#BusinessHotel">Business Hotel</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.owl-ontologies.com/rito#LuxuryHotel" title="http://www.owl-ontologies.com/rito#LuxuryHotel">Luxury Hotel</a> <sup class="type-c" title="class">c</sup>, <a href="#RecomendedHotel" title="http://example.org/def/base#RecomendedHotel">RecomendedHotel</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.owl-ontologies.com/rito#Ruralhotel" title="http://www.owl-ontologies.com/rito#Ruralhotel">Ruralhotel</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.owl-ontologies.com/rito#TourismHotel" title="http://www.owl-ontologies.com/rito#TourismHotel">Tourism Hotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#hotelId" title="http://www.owl-ontologies.com/rito#hotelId">hotel id</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.owl-ontologies.com/rito#hotelName" title="http://www.owl-ontologies.com/rito#hotelName">hotel name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.owl-ontologies.com/rito#hotelPrice" title="http://www.owl-ontologies.com/rito#hotelPrice">hotel price</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.owl-ontologies.com/rito#hotelRating" title="http://www.owl-ontologies.com/rito#hotelRating">hotel rating</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.owl-ontologies.com/rito#stars" title="http://www.owl-ontologies.com/rito#stars">stars</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#hasHotel" title="http://www.owl-ontologies.com/rito#hasHotel">has hotel</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#ItalianRestaurant">
+  <h3>Italian Restaurant<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#ItalianRestaurant</p>
+  <div class="comment">
+   <span class="markdown">A restaurant of italian food with any special interest</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#Restaurant" title="http://www.owl-ontologies.com/rito#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#JapanRestaurant">
+  <h3>Japan Restaurant<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#JapanRestaurant</p>
+  <div class="comment">
+   <span class="markdown">A restaurant of japanese food with any special interest</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#Restaurant" title="http://www.owl-ontologies.com/rito#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#Restaurant_Delicia_Màlaga" title="http://example.org/def/base#Restaurant_Delicia_Màlaga">Restaurant Delicia Màlaga</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#LuxuryHotel">
+  <h3>Luxury Hotel<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#LuxuryHotel</p>
+  <div class="comment">
+   <span class="markdown">An hotel specially luxury</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#Hotel" title="http://www.owl-ontologies.com/rito#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#MediterraneanRestaurant">
+  <h3>Mediterranean Restaurant<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#MediterraneanRestaurant</p>
+  <div class="comment">
+   <span class="markdown">A restaurant of mediterranean food with any special interest</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#Restaurant" title="http://www.owl-ontologies.com/rito#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#Metro">
+  <h3>Metro<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#Metro</p>
+  <div class="comment">
+   <span class="markdown">Rellevant metro service in a city</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#Transport" title="http://www.owl-ontologies.com/rito#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#MexicanRestaurant">
+  <h3>Mexican Restaurant<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#MexicanRestaurant</p>
+  <div class="comment">
+   <span class="markdown">A restaurant of mexican food with any special interest</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#Restaurant" title="http://www.owl-ontologies.com/rito#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#Monument">
+  <h3>Monument<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#Monument</p>
+  <div class="comment">
+   <span class="markdown">A monument in a city</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#Attraction" title="http://www.owl-ontologies.com/rito#Attraction">Attraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#Museum">
+  <h3>Museum<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#Museum</p>
+  <div class="comment">
+   <span class="markdown">A museum in a city</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#Attraction" title="http://www.owl-ontologies.com/rito#Attraction">Attraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#MusicEvent">
+  <h3>Music Event<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#MusicEvent</p>
+  <div class="comment">
+   <span class="markdown">An event with special music interest</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#Event" title="http://www.owl-ontologies.com/rito#Event">Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#Fira_Màlaga" title="http://example.org/def/base#Fira_Màlaga">Fira Màlaga</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#Park">
+  <h3>Park<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#Park</p>
+  <div class="comment">
+   <span class="markdown">A park in a city</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#Attraction" title="http://www.owl-ontologies.com/rito#Attraction">Attraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#Catedral_Màlaga" title="http://example.org/def/base#Catedral_Màlaga">Catedral Màlaga</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="RecomendedAttraction">
+  <h3>recomendedAttraction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#RecomendedAttraction</p>
+  <div class="comment">
+   <span class="markdown">Recomended by rules</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#Attraction" title="http://www.owl-ontologies.com/rito#Attraction">Attraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="RecomendedHotel">
+  <h3>RecomendedHotel<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#RecomendedHotel</p>
+  <div class="comment">
+   <span class="markdown">Recomended by rules</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#Hotel" title="http://www.owl-ontologies.com/rito#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="RecomendedRestaurant">
+  <h3>RecomendedRestaurant<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#RecomendedRestaurant</p>
+  <div class="comment">
+   <span class="markdown">Recomended by rules</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#Restaurant" title="http://www.owl-ontologies.com/rito#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#Restaurant">
+  <h3>Restaurant<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#Restaurant</p>
+  <div class="comment">
+   <span class="markdown">A restaurant with any special interest</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#AndalusiRestaurant" title="http://www.owl-ontologies.com/rito#AndalusiRestaurant">Andalusi Restaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.owl-ontologies.com/rito#ItalianRestaurant" title="http://www.owl-ontologies.com/rito#ItalianRestaurant">Italian Restaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.owl-ontologies.com/rito#JapanRestaurant" title="http://www.owl-ontologies.com/rito#JapanRestaurant">Japan Restaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.owl-ontologies.com/rito#MediterraneanRestaurant" title="http://www.owl-ontologies.com/rito#MediterraneanRestaurant">Mediterranean Restaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.owl-ontologies.com/rito#MexicanRestaurant" title="http://www.owl-ontologies.com/rito#MexicanRestaurant">Mexican Restaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#RecomendedRestaurant" title="http://example.org/def/base#RecomendedRestaurant">RecomendedRestaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#restiid" title="http://www.owl-ontologies.com/rito#restiid">rest id</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.owl-ontologies.com/rito#restName" title="http://www.owl-ontologies.com/rito#restName">rest name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.owl-ontologies.com/rito#restPrice" title="http://www.owl-ontologies.com/rito#restPrice">rest price</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.owl-ontologies.com/rito#restRating" title="http://www.owl-ontologies.com/rito#restRating">rest rating</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#hasRestaurant" title="http://www.owl-ontologies.com/rito#hasRestaurant">has restaurant</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#Ruralhotel">
+  <h3>Ruralhotel<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#Ruralhotel</p>
+  <div class="comment">
+   <span class="markdown">An hotel located near a rural zone</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#Hotel" title="http://www.owl-ontologies.com/rito#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#SportEvent">
+  <h3>Sport Event<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#SportEvent</p>
+  <div class="comment">
+   <span class="markdown">An event with special sport interest</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#Event" title="http://www.owl-ontologies.com/rito#Event">Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#Taxi">
+  <h3>Taxi<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#Taxi</p>
+  <div class="comment">
+   <span class="markdown">Rellevant taxi service in a city</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#Transport" title="http://www.owl-ontologies.com/rito#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#TechEvent">
+  <h3>Tech Event<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#TechEvent</p>
+  <div class="comment">
+   <span class="markdown">An event with special technological interest</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#Event" title="http://www.owl-ontologies.com/rito#Event">Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#TourismHotel">
+  <h3>Tourism Hotel<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#TourismHotel</p>
+  <div class="comment">
+   <span class="markdown">An hotel located close to serveal tourist places</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#Hotel" title="http://www.owl-ontologies.com/rito#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#Hotel_Royal_Màlaga" title="http://example.org/def/base#Hotel_Royal_Màlaga">Hotel Royal Màlaga</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#Tram">
+  <h3>Tram<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#Tram</p>
+  <div class="comment">
+   <span class="markdown">Rellevant tram service in a city</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#Transport" title="http://www.owl-ontologies.com/rito#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#Tramvia_Màlaga" title="http://example.org/def/base#Tramvia_Màlaga">Tramvia Màlaga</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#Transport">
+  <h3>Transport<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#Transport</p>
+  <div class="comment">
+   <span class="markdown">Rellevant transport in a city</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#BikeSharing" title="http://www.owl-ontologies.com/rito#BikeSharing">Bike Sharing</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.owl-ontologies.com/rito#Bus" title="http://www.owl-ontologies.com/rito#Bus">Bus</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.owl-ontologies.com/rito#Metro" title="http://www.owl-ontologies.com/rito#Metro">Metro</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.owl-ontologies.com/rito#Taxi" title="http://www.owl-ontologies.com/rito#Taxi">Taxi</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.owl-ontologies.com/rito#Tram" title="http://www.owl-ontologies.com/rito#Tram">Tram</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#averagePrice" title="http://www.owl-ontologies.com/rito#averagePrice">average price</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.owl-ontologies.com/rito#company" title="http://www.owl-ontologies.com/rito#company">company</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.owl-ontologies.com/rito#tranId" title="http://www.owl-ontologies.com/rito#tranId">tran id</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#hasTransport" title="http://www.owl-ontologies.com/rito#hasTransport">has transport</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#http://www.owl-ontologies.com/rito#hasAttraction" title="http://www.owl-ontologies.com/rito#hasAttraction">has attraction</a></li>
+  <li><a href="#has_City" title="http://example.org/def/base#has_City"> <span>has City</span> </a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#hasEvent" title="http://www.owl-ontologies.com/rito#hasEvent">has event</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#hasHotel" title="http://www.owl-ontologies.com/rito#hasHotel">has hotel</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#hasRestaurant" title="http://www.owl-ontologies.com/rito#hasRestaurant">has restaurant</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#hasTransport" title="http://www.owl-ontologies.com/rito#hasTransport">has transport</a></li>
+ </ul>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#hasAttraction">
+  <h3>has attraction<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#hasAttraction</p>
+  <div class="comment">
+   <span class="markdown">an attraction in that city</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional, inverse functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/rito#City" title="http://www.owl-ontologies.com/rito#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/rito#Attraction" title="http://www.owl-ontologies.com/rito#Attraction">Attraction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#has_City" title="http://example.org/def/base#has_City">has City</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="has_City">
+  <h3>has City<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#has_City</p>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/rito#hasAttraction" title="http://www.owl-ontologies.com/rito#hasAttraction">has attraction</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.owl-ontologies.com/rito#hasEvent" title="http://www.owl-ontologies.com/rito#hasEvent">has event</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.owl-ontologies.com/rito#hasHotel" title="http://www.owl-ontologies.com/rito#hasHotel">has hotel</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.owl-ontologies.com/rito#hasRestaurant" title="http://www.owl-ontologies.com/rito#hasRestaurant">has restaurant</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.owl-ontologies.com/rito#hasTransport" title="http://www.owl-ontologies.com/rito#hasTransport">has transport</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#hasEvent">
+  <h3>has event<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#hasEvent</p>
+  <div class="comment">
+   <span class="markdown">an event in that city</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional, inverse functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/rito#City" title="http://www.owl-ontologies.com/rito#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/rito#Event" title="http://www.owl-ontologies.com/rito#Event">Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#has_City" title="http://example.org/def/base#has_City">has City</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#hasHotel">
+  <h3>has hotel<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#hasHotel</p>
+  <div class="comment">
+   <span class="markdown">a hotel in that city</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional, inverse functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/rito#City" title="http://www.owl-ontologies.com/rito#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/rito#Hotel" title="http://www.owl-ontologies.com/rito#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#has_City" title="http://example.org/def/base#has_City">has City</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#hasRestaurant">
+  <h3>has restaurant<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#hasRestaurant</p>
+  <div class="comment">
+   <span class="markdown">a restaurant in that city</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional, inverse functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/rito#City" title="http://www.owl-ontologies.com/rito#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/rito#Restaurant" title="http://www.owl-ontologies.com/rito#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#has_City" title="http://example.org/def/base#has_City">has City</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#hasTransport">
+  <h3>has transport<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#hasTransport</p>
+  <div class="comment">
+   <span class="markdown">a transport service in that city</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional, inverse functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/rito#City" title="http://www.owl-ontologies.com/rito#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/rito#Transport" title="http://www.owl-ontologies.com/rito#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#has_City" title="http://example.org/def/base#has_City">has City</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#http://www.owl-ontologies.com/rito#attId" title="http://www.owl-ontologies.com/rito#attId">attr id</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#attrName" title="http://www.owl-ontologies.com/rito#attrName">attr name</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#attrRating" title="http://www.owl-ontologies.com/rito#attrRating">attr rating</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#averagePrice" title="http://www.owl-ontologies.com/rito#averagePrice">average price</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#cityId" title="http://www.owl-ontologies.com/rito#cityId">city id</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#cityName" title="http://www.owl-ontologies.com/rito#cityName">city name</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#company" title="http://www.owl-ontologies.com/rito#company">company</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#eventDate" title="http://www.owl-ontologies.com/rito#eventDate">event date</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#eventId" title="http://www.owl-ontologies.com/rito#eventId">event id</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#eventName" title="http://www.owl-ontologies.com/rito#eventName">event name</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#hotelId" title="http://www.owl-ontologies.com/rito#hotelId">hotel id</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#hotelName" title="http://www.owl-ontologies.com/rito#hotelName">hotel name</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#hotelPrice" title="http://www.owl-ontologies.com/rito#hotelPrice">hotel price</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#hotelRating" title="http://www.owl-ontologies.com/rito#hotelRating">hotel rating</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#location" title="http://www.owl-ontologies.com/rito#location">location</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#restiid" title="http://www.owl-ontologies.com/rito#restiid">rest id</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#restName" title="http://www.owl-ontologies.com/rito#restName">rest name</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#restPrice" title="http://www.owl-ontologies.com/rito#restPrice">rest price</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#restRating" title="http://www.owl-ontologies.com/rito#restRating">rest rating</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#stars" title="http://www.owl-ontologies.com/rito#stars">stars</a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#tranId" title="http://www.owl-ontologies.com/rito#tranId">tran id</a></li>
+ </ul>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#attId">
+  <h3>attr id<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#attId</p>
+  <div class="comment">
+   <span class="markdown">identificative number of the attraction</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/rito#Attraction" title="http://www.owl-ontologies.com/rito#Attraction">Attraction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#int" target="_blank" title="http://www.w3.org/2001/XMLSchema#int">int</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#attrName">
+  <h3>attr name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#attrName</p>
+  <div class="comment">
+   <span class="markdown">attraction's name</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/rito#Attraction" title="http://www.owl-ontologies.com/rito#Attraction">Attraction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#attrRating">
+  <h3>attr rating<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#attrRating</p>
+  <div class="comment">
+   <span class="markdown">rating of the attraction</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/rito#Attraction" title="http://www.owl-ontologies.com/rito#Attraction">Attraction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#averagePrice">
+  <h3>average price<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#averagePrice</p>
+  <div class="comment">
+   <span class="markdown">average price of the transport</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/rito#Transport" title="http://www.owl-ontologies.com/rito#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#cityId">
+  <h3>city id<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#cityId</p>
+  <div class="comment">
+   <span class="markdown">identificative number of the city</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/rito#City" title="http://www.owl-ontologies.com/rito#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#int" target="_blank" title="http://www.w3.org/2001/XMLSchema#int">int</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#cityName">
+  <h3>city name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#cityName</p>
+  <div class="comment">
+   <span class="markdown">city's name</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/rito#City" title="http://www.owl-ontologies.com/rito#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#company">
+  <h3>company<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#company</p>
+  <div class="comment">
+   <span class="markdown">Transport Company Name</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/rito#Transport" title="http://www.owl-ontologies.com/rito#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#eventDate">
+  <h3>event date<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#eventDate</p>
+  <div class="comment">
+   <span class="markdown">The date of an event</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/rito#Event" title="http://www.owl-ontologies.com/rito#Event">Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#eventId">
+  <h3>event id<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#eventId</p>
+  <div class="comment">
+   <span class="markdown">identificative number of the event</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/rito#Event" title="http://www.owl-ontologies.com/rito#Event">Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#int" target="_blank" title="http://www.w3.org/2001/XMLSchema#int">int</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#eventName">
+  <h3>event name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#eventName</p>
+  <div class="comment">
+   <span class="markdown">event's name</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/rito#Event" title="http://www.owl-ontologies.com/rito#Event">Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#hotelId">
+  <h3>hotel id<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#hotelId</p>
+  <div class="comment">
+   <span class="markdown">identificative number of the hotel</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/rito#Hotel" title="http://www.owl-ontologies.com/rito#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#int" target="_blank" title="http://www.w3.org/2001/XMLSchema#int">int</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#hotelName">
+  <h3>hotel name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#hotelName</p>
+  <div class="comment">
+   <span class="markdown">The name of the hotel</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/rito#Hotel" title="http://www.owl-ontologies.com/rito#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#hotelPrice">
+  <h3>hotel price<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#hotelPrice</p>
+  <div class="comment">
+   <span class="markdown">Average price of the hotel</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/rito#Hotel" title="http://www.owl-ontologies.com/rito#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#int" target="_blank" title="http://www.w3.org/2001/XMLSchema#int">int</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#hotelRating">
+  <h3>hotel rating<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#hotelRating</p>
+  <div class="comment">
+   <span class="markdown">Rating of the hotel's service</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/rito#Hotel" title="http://www.owl-ontologies.com/rito#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#location">
+  <h3>location<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#location</p>
+  <div class="comment">
+   <span class="markdown">Location of a city</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/rito#City" title="http://www.owl-ontologies.com/rito#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#restiid">
+  <h3>rest id<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#restiid</p>
+  <div class="comment">
+   <span class="markdown">identificative number of the restaurant</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/rito#Restaurant" title="http://www.owl-ontologies.com/rito#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#int" target="_blank" title="http://www.w3.org/2001/XMLSchema#int">int</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#restName">
+  <h3>rest name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#restName</p>
+  <div class="comment">
+   <span class="markdown">restaurant's name</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/rito#Restaurant" title="http://www.owl-ontologies.com/rito#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#restPrice">
+  <h3>rest price<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#restPrice</p>
+  <div class="comment">
+   <span class="markdown">Average price of a restaurant</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/rito#Restaurant" title="http://www.owl-ontologies.com/rito#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#int" target="_blank" title="http://www.w3.org/2001/XMLSchema#int">int</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#restRating">
+  <h3>rest rating<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#restRating</p>
+  <div class="comment">
+   <span class="markdown">Restaurant's rating</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/rito#Restaurant" title="http://www.owl-ontologies.com/rito#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#stars">
+  <h3>stars<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#stars</p>
+  <div class="comment">
+   <span class="markdown">Number of stars of an hotel</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/rito#Hotel" title="http://www.owl-ontologies.com/rito#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#int" target="_blank" title="http://www.w3.org/2001/XMLSchema#int">int</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#tranId">
+  <h3>tran id<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#tranId</p>
+  <div class="comment">
+   <span class="markdown">identificative number of the transport</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.owl-ontologies.com/rito#Transport" title="http://www.owl-ontologies.com/rito#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#int" target="_blank" title="http://www.w3.org/2001/XMLSchema#int">int</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="annotationproperties">
+ <h3 id="annotationproperties" class="list">Annotation Properties</h3>
+ <ul class="hlist">
+  <li><a href="#http://www.w3.org/2002/07/owl#backwardCompatibleWith" title="http://www.w3.org/2002/07/owl#backwardCompatibleWith"> <span>backward Compatible With</span> </a></li>
+  <li><a href="#https://w3id.org/mod#createdWith" title="https://w3id.org/mod#createdWith"> <span>created With</span> </a></li>
+  <li><a href="#http://www.w3.org/2002/07/owl#incompatibleWith" title="http://www.w3.org/2002/07/owl#incompatibleWith"> <span>incompatible With</span> </a></li>
+  <li><a href="#http://www.w3.org/2002/07/owl#priorVersion" title="http://www.w3.org/2002/07/owl#priorVersion"> <span>prior Version</span> </a></li>
+  <li><a href="#http://www.w3.org/2000/01/rdf-schema#sameAs" title="http://www.w3.org/2000/01/rdf-schema#sameAs"> <span>same As</span> </a></li>
+  <li><a href="#http://www.w3.org/2002/07/owl#versionInfo" title="http://www.w3.org/2002/07/owl#versionInfo"> <span>version Info</span> </a></li>
+ </ul>
+ <div class="entity" id="http://www.w3.org/2002/07/owl#backwardCompatibleWith">
+  <h3>backward Compatible With<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2002/07/owl#backwardCompatibleWith</p>
+ </div>
+ <div class="entity" id="https://w3id.org/mod#createdWith">
+  <h3>created With<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/mod#createdWith</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2002/07/owl#incompatibleWith">
+  <h3>incompatible With<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2002/07/owl#incompatibleWith</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2002/07/owl#priorVersion">
+  <h3>prior Version<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2002/07/owl#priorVersion</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2000/01/rdf-schema#sameAs">
+  <h3>same As<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2000/01/rdf-schema#sameAs</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2002/07/owl#versionInfo">
+  <h3>version Info<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2002/07/owl#versionInfo</p>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+ <h3 id="namedindividuals" class="list">Named Individuals</h3>
+ <ul class="hlist">
+  <li><a href="#Catedral_Màlaga" title="http://example.org/def/base#Catedral_Màlaga"> <span>Catedral Màlaga</span> </a></li>
+  <li><a href="#Fira_Màlaga" title="http://example.org/def/base#Fira_Màlaga"> <span>Fira Màlaga</span> </a></li>
+  <li><a href="#Hotel_Royal_Màlaga" title="http://example.org/def/base#Hotel_Royal_Màlaga"> <span>Hotel Royal Màlaga</span> </a></li>
+  <li><a href="#http://www.owl-ontologies.com/rito#Màlaga" title="http://www.owl-ontologies.com/rito#Màlaga">Màlaga</a></li>
+  <li><a href="#Restaurant_Delicia_Màlaga" title="http://example.org/def/base#Restaurant_Delicia_Màlaga"> <span>Restaurant Delicia Màlaga</span> </a></li>
+  <li><a href="#Tramvia_Màlaga" title="http://example.org/def/base#Tramvia_Màlaga"> <span>Tramvia Màlaga</span> </a></li>
+ </ul>
+ <div class="entity" id="Catedral_Màlaga">
+  <h3>Catedral Màlaga<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#Catedral_Màlaga</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#Park" title="http://www.owl-ontologies.com/rito#Park">Park</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#has_City" title="http://example.org/def/base#has_City">has City</a> <sup class="type-op" title="object property">op</sup> <a href="#http://www.owl-ontologies.com/rito#Màlaga" title="http://www.owl-ontologies.com/rito#Màlaga">Màlaga</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#attId" title="http://www.owl-ontologies.com/rito#attId">attr id</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"21"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
+   </dd>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#attrName" title="http://www.owl-ontologies.com/rito#attrName">attr name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Catedral Màlaga"</span>
+   </dd>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#attrRating" title="http://www.owl-ontologies.com/rito#attrRating">attr rating</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"4.4"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Fira_Màlaga">
+  <h3>Fira Màlaga<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#Fira_Màlaga</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#MusicEvent" title="http://www.owl-ontologies.com/rito#MusicEvent">Music Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#has_City" title="http://example.org/def/base#has_City">has City</a> <sup class="type-op" title="object property">op</sup> <a href="#http://www.owl-ontologies.com/rito#Màlaga" title="http://www.owl-ontologies.com/rito#Màlaga">Màlaga</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#hasEvent" title="http://www.owl-ontologies.com/rito#hasEvent">has event</a> <sup class="type-op" title="object property">op</sup> <a href="#Fira_Màlaga" title="http://example.org/def/base#Fira_Màlaga">Fira Màlaga</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#eventDate" title="http://www.owl-ontologies.com/rito#eventDate">event date</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"2024-12-22T00:00:00"^^<a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a> </span>
+   </dd>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#eventId" title="http://www.owl-ontologies.com/rito#eventId">event id</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"8"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
+   </dd>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#eventName" title="http://www.owl-ontologies.com/rito#eventName">event name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Fira màlaga"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Hotel_Royal_Màlaga">
+  <h3>Hotel Royal Màlaga<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#Hotel_Royal_Màlaga</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#TourismHotel" title="http://www.owl-ontologies.com/rito#TourismHotel">Tourism Hotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#has_City" title="http://example.org/def/base#has_City">has City</a> <sup class="type-op" title="object property">op</sup> <a href="#http://www.owl-ontologies.com/rito#Màlaga" title="http://www.owl-ontologies.com/rito#Màlaga">Màlaga</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#hotelId" title="http://www.owl-ontologies.com/rito#hotelId">hotel id</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"3"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
+   </dd>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#hotelName" title="http://www.owl-ontologies.com/rito#hotelName">hotel name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Hotel Royal Màlaga"</span>
+   </dd>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#hotelPrice" title="http://www.owl-ontologies.com/rito#hotelPrice">hotel price</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"175"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
+   </dd>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#hotelRating" title="http://www.owl-ontologies.com/rito#hotelRating">hotel rating</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"4.4"^^<a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a> </span>
+   </dd>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#stars" title="http://www.owl-ontologies.com/rito#stars">stars</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"5"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.owl-ontologies.com/rito#Màlaga">
+  <h3>Màlaga<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.owl-ontologies.com/rito#Màlaga</p>
+  <div class="comment">
+   <span class="markdown">Instance of a city</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#City" title="http://www.owl-ontologies.com/rito#City">City</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#hasAttraction" title="http://www.owl-ontologies.com/rito#hasAttraction">has attraction</a> <sup class="type-op" title="object property">op</sup> <a href="#Catedral_Màlaga" title="http://example.org/def/base#Catedral_Màlaga">Catedral Màlaga</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#hasEvent" title="http://www.owl-ontologies.com/rito#hasEvent">has event</a> <sup class="type-op" title="object property">op</sup> <a href="#Fira_Màlaga" title="http://example.org/def/base#Fira_Màlaga">Fira Màlaga</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#hasHotel" title="http://www.owl-ontologies.com/rito#hasHotel">has hotel</a> <sup class="type-op" title="object property">op</sup> <a href="#Hotel_Royal_Màlaga" title="http://example.org/def/base#Hotel_Royal_Màlaga">Hotel Royal Màlaga</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#hasRestaurant" title="http://www.owl-ontologies.com/rito#hasRestaurant">has restaurant</a> <sup class="type-op" title="object property">op</sup> <a href="#Restaurant_Delicia_Màlaga" title="http://example.org/def/base#Restaurant_Delicia_Màlaga">Restaurant Delicia Màlaga</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#hasTransport" title="http://www.owl-ontologies.com/rito#hasTransport">has transport</a> <sup class="type-op" title="object property">op</sup> <a href="#Tramvia_Màlaga" title="http://example.org/def/base#Tramvia_Màlaga">Tramvia Màlaga</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#cityId" title="http://www.owl-ontologies.com/rito#cityId">city id</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"11"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
+   </dd>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#cityName" title="http://www.owl-ontologies.com/rito#cityName">city name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Màlaga"</span>
+   </dd>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#location" title="http://www.owl-ontologies.com/rito#location">location</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"36.7213,-4.4210"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Restaurant_Delicia_Màlaga">
+  <h3>Restaurant Delicia Màlaga<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#Restaurant_Delicia_Màlaga</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#JapanRestaurant" title="http://www.owl-ontologies.com/rito#JapanRestaurant">Japan Restaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#restName" title="http://www.owl-ontologies.com/rito#restName">rest name</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Restaurant Delicia Màlaga"</span>
+   </dd>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#restPrice" title="http://www.owl-ontologies.com/rito#restPrice">rest price</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"38"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
+   </dd>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#restRating" title="http://www.owl-ontologies.com/rito#restRating">rest rating</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"4.5"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#restiid" title="http://www.owl-ontologies.com/rito#restiid">rest id</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"4"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Tramvia_Màlaga">
+  <h3>Tramvia Màlaga<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/def/base#Tramvia_Màlaga</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#Tram" title="http://www.owl-ontologies.com/rito#Tram">Tram</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#has_City" title="http://example.org/def/base#has_City">has City</a> <sup class="type-op" title="object property">op</sup> <a href="#http://www.owl-ontologies.com/rito#Màlaga" title="http://www.owl-ontologies.com/rito#Màlaga">Màlaga</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#averagePrice" title="http://www.owl-ontologies.com/rito#averagePrice">average price</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"7.66"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#company" title="http://www.owl-ontologies.com/rito#company">company</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"City Màlaga"</span>
+   </dd>
+   <dd>
+    <a href="#http://www.owl-ontologies.com/rito#tranId" title="http://www.owl-ontologies.com/rito#tranId">tran id</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"16"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="swrlrules">
+ <h3 id="swrlrules" class="list">SWRL rules</h3>
+ <ul class="hlist">
+  <li><a href="#d4e1173">Rule #1</a></li>
+  <li><a href="#d4e1285">Rule #2</a></li>
+  <li><a href="#d4e1398">Rule #3</a></li>
+ </ul>
+ <div class="entity" id="d4e1173">
+  <h3>Rule #1<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p><a href="#http://www.owl-ontologies.com/rito#Hotel" title="http://www.owl-ontologies.com/rito#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>(?h) , <a href="#http://www.owl-ontologies.com/rito#hotelRating" title="http://www.owl-ontologies.com/rito#hotelRating">hotel rating</a> <sup class="type-dp" title="data property">dp</sup>(?h,?r) , <a href="http://www.w3.org/2003/11/swrlb#greaterThan" title="greaterThan">greaterThan</a>(?) -&gt; <a href="#RecomendedHotel" title="http://example.org/def/base#RecomendedHotel">RecomendedHotel</a> <sup class="type-c" title="class">c</sup>(?h)</p>
+ </div>
+ <div class="entity" id="d4e1285">
+  <h3>Rule #2<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p><a href="#http://www.owl-ontologies.com/rito#Restaurant" title="http://www.owl-ontologies.com/rito#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>(?re) , <a href="#http://www.owl-ontologies.com/rito#restRating" title="http://www.owl-ontologies.com/rito#restRating">rest rating</a> <sup class="type-dp" title="data property">dp</sup>(?re,?r) , <a href="http://www.w3.org/2003/11/swrlb#greaterThan" title="greaterThan">greaterThan</a>(?) -&gt; <a href="#RecomendedRestaurant" title="http://example.org/def/base#RecomendedRestaurant">RecomendedRestaurant</a> <sup class="type-c" title="class">c</sup>(?h)</p>
+ </div>
+ <div class="entity" id="d4e1398">
+  <h3>Rule #3<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p><a href="#http://www.owl-ontologies.com/rito#Attraction" title="http://www.owl-ontologies.com/rito#Attraction">Attraction</a> <sup class="type-c" title="class">c</sup>(?a) , <a href="#http://www.owl-ontologies.com/rito#attrRating" title="http://www.owl-ontologies.com/rito#attrRating">attr rating</a> <sup class="type-dp" title="data property">dp</sup>(?a,?r) , <a href="http://www.w3.org/2003/11/swrlb#greaterThan" title="greaterThan">greaterThan</a>(?) -&gt; <a href="#RecomendedAttraction" title="http://example.org/def/base#RecomendedAttraction">recomendedAttraction</a> <sup class="type-c" title="class">c</sup>(?a)</p>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals <br/>
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+   
+
+<!--CHANGELOG SECTION-->
+   <div id="changelog"><div id="changelog">
+<h2 id="changes" class="list">Changes from last version</h2>
+<h3 id="changeClass" class="list">Classes</h3>
+<details><summary><u>Added classes</u></summary>
+<ul><li><a href="#RecomendedAttraction">http://example.org/def/base#RecomendedAttraction</a>
+<ul>
+<li>Added: SubClass of http://www.owl-ontologies.com/rito#Attraction</li>
+</ul>
+</li>
+<li><a href="#RecomendedHotel">http://example.org/def/base#RecomendedHotel</a>
+<ul>
+<li>Added: SubClass of http://www.owl-ontologies.com/rito#Hotel</li>
+</ul>
+</li>
+<li><a href="#RecomendedRestaurant">http://example.org/def/base#RecomendedRestaurant</a>
+<ul>
+<li>Added: SubClass of http://www.owl-ontologies.com/rito#Restaurant</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#AndalusiRestaurant">http://www.owl-ontologies.com/rito#AndalusiRestaurant</a>
+<ul>
+<li>Added: SubClass of http://www.owl-ontologies.com/rito#Restaurant</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#Attraction">http://www.owl-ontologies.com/rito#Attraction</a>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#Beach">http://www.owl-ontologies.com/rito#Beach</a>
+<ul>
+<li>Added: SubClass of http://www.owl-ontologies.com/rito#Attraction</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#BeachHotel">http://www.owl-ontologies.com/rito#BeachHotel</a>
+<ul>
+<li>Added: SubClass of http://www.owl-ontologies.com/rito#Hotel</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#BikeSharing">http://www.owl-ontologies.com/rito#BikeSharing</a>
+<ul>
+<li>Added: SubClass of http://www.owl-ontologies.com/rito#Transport</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#Bus">http://www.owl-ontologies.com/rito#Bus</a>
+<ul>
+<li>Added: SubClass of http://www.owl-ontologies.com/rito#Transport</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#BusinessHotel">http://www.owl-ontologies.com/rito#BusinessHotel</a>
+<ul>
+<li>Added: SubClass of http://www.owl-ontologies.com/rito#Hotel</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#City">http://www.owl-ontologies.com/rito#City</a>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#Cultural">http://www.owl-ontologies.com/rito#Cultural</a>
+<ul>
+<li>Added: SubClass of http://www.owl-ontologies.com/rito#Attraction</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#CulturalEvent">http://www.owl-ontologies.com/rito#CulturalEvent</a>
+<ul>
+<li>Added: SubClass of http://www.owl-ontologies.com/rito#Event</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#Event">http://www.owl-ontologies.com/rito#Event</a>
+<ul>
+<li>Added: EquivalentClasses EquivalentClasses(&lt;http://www.owl-ontologies.com/rito#Event&gt; DataMinCardinality(1 &lt;http://www.owl-ontologies.com/rito#eventDate&gt; xsd:dateTime))</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#GastroEvent">http://www.owl-ontologies.com/rito#GastroEvent</a>
+<ul>
+<li>Added: SubClass of http://www.owl-ontologies.com/rito#Event</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#Hotel">http://www.owl-ontologies.com/rito#Hotel</a>
+<ul>
+<li>Added: EquivalentClasses EquivalentClasses(&lt;http://www.owl-ontologies.com/rito#Hotel&gt; DataMinCardinality(1 &lt;http://www.owl-ontologies.com/rito#hotelRating&gt; xsd:float))</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#ItalianRestaurant">http://www.owl-ontologies.com/rito#ItalianRestaurant</a>
+<ul>
+<li>Added: SubClass of http://www.owl-ontologies.com/rito#Restaurant</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#JapanRestaurant">http://www.owl-ontologies.com/rito#JapanRestaurant</a>
+<ul>
+<li>Added: SubClass of http://www.owl-ontologies.com/rito#Restaurant</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#LuxuryHotel">http://www.owl-ontologies.com/rito#LuxuryHotel</a>
+<ul>
+<li>Added: SubClass of http://www.owl-ontologies.com/rito#Hotel</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#MediterraneanRestaurant">http://www.owl-ontologies.com/rito#MediterraneanRestaurant</a>
+<ul>
+<li>Added: SubClass of http://www.owl-ontologies.com/rito#Restaurant</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#Metro">http://www.owl-ontologies.com/rito#Metro</a>
+<ul>
+<li>Added: SubClass of http://www.owl-ontologies.com/rito#Transport</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#MexicanRestaurant">http://www.owl-ontologies.com/rito#MexicanRestaurant</a>
+<ul>
+<li>Added: SubClass of http://www.owl-ontologies.com/rito#Restaurant</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#Monument">http://www.owl-ontologies.com/rito#Monument</a>
+<ul>
+<li>Added: SubClass of http://www.owl-ontologies.com/rito#Attraction</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#Museum">http://www.owl-ontologies.com/rito#Museum</a>
+<ul>
+<li>Added: SubClass of http://www.owl-ontologies.com/rito#Attraction</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#MusicEvent">http://www.owl-ontologies.com/rito#MusicEvent</a>
+<ul>
+<li>Added: SubClass of http://www.owl-ontologies.com/rito#Event</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#Park">http://www.owl-ontologies.com/rito#Park</a>
+<ul>
+<li>Added: SubClass of http://www.owl-ontologies.com/rito#Attraction</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#Restaurant">http://www.owl-ontologies.com/rito#Restaurant</a>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#Ruralhotel">http://www.owl-ontologies.com/rito#Ruralhotel</a>
+<ul>
+<li>Added: SubClass of http://www.owl-ontologies.com/rito#Hotel</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#SportEvent">http://www.owl-ontologies.com/rito#SportEvent</a>
+<ul>
+<li>Added: SubClass of http://www.owl-ontologies.com/rito#Event</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#Taxi">http://www.owl-ontologies.com/rito#Taxi</a>
+<ul>
+<li>Added: SubClass of http://www.owl-ontologies.com/rito#Transport</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#TechEvent">http://www.owl-ontologies.com/rito#TechEvent</a>
+<ul>
+<li>Added: SubClass of http://www.owl-ontologies.com/rito#Event</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#TourismHotel">http://www.owl-ontologies.com/rito#TourismHotel</a>
+<ul>
+<li>Added: SubClass of http://www.owl-ontologies.com/rito#Hotel</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#Tram">http://www.owl-ontologies.com/rito#Tram</a>
+<ul>
+<li>Added: SubClass of http://www.owl-ontologies.com/rito#Transport</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#Transport">http://www.owl-ontologies.com/rito#Transport</a>
+</li>
+</ul></details><details><summary><u>Deleted classes</u></summary>
+<ul><li><a href="#https://w3id.org/example#Organization">https://w3id.org/example#Organization</a>
+</li>
+<li><a href="#https://w3id.org/example#Researcher">https://w3id.org/example#Researcher</a>
+</li>
+</ul></details><h3 id="changeProp" class="list">Object Properties</h3>
+<details><summary><u>Added object properties</u></summary>
+<ul><li><a href="#has_City">http://example.org/def/base#has_City</a>
+<ul>
+<li>Added: InverseObjectProperties InverseObjectProperties(&lt;http://example.org/def/base#has_City&gt; &lt;http://www.owl-ontologies.com/rito#hasHotel&gt;)</li>
+<li>Added: InverseObjectProperties InverseObjectProperties(&lt;http://example.org/def/base#has_City&gt; &lt;http://www.owl-ontologies.com/rito#hasRestaurant&gt;)</li>
+<li>Added: InverseObjectProperties InverseObjectProperties(&lt;http://example.org/def/base#has_City&gt; &lt;http://www.owl-ontologies.com/rito#hasEvent&gt;)</li>
+<li>Added: InverseObjectProperties InverseObjectProperties(&lt;http://example.org/def/base#has_City&gt; &lt;http://www.owl-ontologies.com/rito#hasTransport&gt;)</li>
+<li>Added: FunctionalObjectProperty FunctionalObjectProperty(&lt;http://example.org/def/base#has_City&gt;)</li>
+<li>Added: InverseObjectProperties InverseObjectProperties(&lt;http://example.org/def/base#has_City&gt; &lt;http://www.owl-ontologies.com/rito#hasAttraction&gt;)</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#hasAttraction">http://www.owl-ontologies.com/rito#hasAttraction</a>
+<ul>
+<li>Added: domain http://www.owl-ontologies.com/rito#City</li>
+<li>Added: InverseFunctionalObjectProperty InverseFunctionalObjectProperty(&lt;http://www.owl-ontologies.com/rito#hasAttraction&gt;)</li>
+<li>Added: Range http://www.owl-ontologies.com/rito#Attraction</li>
+<li>Added: FunctionalObjectProperty FunctionalObjectProperty(&lt;http://www.owl-ontologies.com/rito#hasAttraction&gt;)</li>
+<li>Added: InverseObjectProperties InverseObjectProperties(&lt;http://example.org/def/base#has_City&gt; &lt;http://www.owl-ontologies.com/rito#hasAttraction&gt;)</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#hasEvent">http://www.owl-ontologies.com/rito#hasEvent</a>
+<ul>
+<li>Added: InverseFunctionalObjectProperty InverseFunctionalObjectProperty(&lt;http://www.owl-ontologies.com/rito#hasEvent&gt;)</li>
+<li>Added: InverseObjectProperties InverseObjectProperties(&lt;http://example.org/def/base#has_City&gt; &lt;http://www.owl-ontologies.com/rito#hasEvent&gt;)</li>
+<li>Added: FunctionalObjectProperty FunctionalObjectProperty(&lt;http://www.owl-ontologies.com/rito#hasEvent&gt;)</li>
+<li>Added: Range http://www.owl-ontologies.com/rito#Event</li>
+<li>Added: domain http://www.owl-ontologies.com/rito#City</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#hasHotel">http://www.owl-ontologies.com/rito#hasHotel</a>
+<ul>
+<li>Added: InverseObjectProperties InverseObjectProperties(&lt;http://example.org/def/base#has_City&gt; &lt;http://www.owl-ontologies.com/rito#hasHotel&gt;)</li>
+<li>Added: domain http://www.owl-ontologies.com/rito#City</li>
+<li>Added: Range http://www.owl-ontologies.com/rito#Hotel</li>
+<li>Added: FunctionalObjectProperty FunctionalObjectProperty(&lt;http://www.owl-ontologies.com/rito#hasHotel&gt;)</li>
+<li>Added: InverseFunctionalObjectProperty InverseFunctionalObjectProperty(&lt;http://www.owl-ontologies.com/rito#hasHotel&gt;)</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#hasRestaurant">http://www.owl-ontologies.com/rito#hasRestaurant</a>
+<ul>
+<li>Added: InverseObjectProperties InverseObjectProperties(&lt;http://example.org/def/base#has_City&gt; &lt;http://www.owl-ontologies.com/rito#hasRestaurant&gt;)</li>
+<li>Added: InverseFunctionalObjectProperty InverseFunctionalObjectProperty(&lt;http://www.owl-ontologies.com/rito#hasRestaurant&gt;)</li>
+<li>Added: Range http://www.owl-ontologies.com/rito#Restaurant</li>
+<li>Added: FunctionalObjectProperty FunctionalObjectProperty(&lt;http://www.owl-ontologies.com/rito#hasRestaurant&gt;)</li>
+<li>Added: domain http://www.owl-ontologies.com/rito#City</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#hasTransport">http://www.owl-ontologies.com/rito#hasTransport</a>
+<ul>
+<li>Added: Range http://www.owl-ontologies.com/rito#Transport</li>
+<li>Added: domain http://www.owl-ontologies.com/rito#City</li>
+<li>Added: FunctionalObjectProperty FunctionalObjectProperty(&lt;http://www.owl-ontologies.com/rito#hasTransport&gt;)</li>
+<li>Added: InverseObjectProperties InverseObjectProperties(&lt;http://example.org/def/base#has_City&gt; &lt;http://www.owl-ontologies.com/rito#hasTransport&gt;)</li>
+<li>Added: InverseFunctionalObjectProperty InverseFunctionalObjectProperty(&lt;http://www.owl-ontologies.com/rito#hasTransport&gt;)</li>
+</ul>
+</li>
+</ul></details><details><summary><u>Deleted object properties</u></summary>
+<ul><li><a href="#https://w3id.org/example#hasMember">https://w3id.org/example#hasMember</a>
+</li>
+<li><a href="#https://w3id.org/example#partOf">https://w3id.org/example#partOf</a>
+</li>
+</ul></details><h3 id="changeDataProp" class="list">Data Properties</h3>
+<details><summary><u>Added data properties</u></summary>
+<ul><li><a href="#http://www.owl-ontologies.com/rito#attId">http://www.owl-ontologies.com/rito#attId</a>
+<ul>
+<li>Added: Domain http://www.owl-ontologies.com/rito#Attraction</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#int</li>
+<li>Added: FunctionalDataProperty FunctionalDataProperty(&lt;http://www.owl-ontologies.com/rito#attId&gt;)</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#attrName">http://www.owl-ontologies.com/rito#attrName</a>
+<ul>
+<li>Added: Domain http://www.owl-ontologies.com/rito#Attraction</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+<li>Added: FunctionalDataProperty FunctionalDataProperty(&lt;http://www.owl-ontologies.com/rito#attrName&gt;)</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#attrRating">http://www.owl-ontologies.com/rito#attrRating</a>
+<ul>
+<li>Added: Domain http://www.owl-ontologies.com/rito#Attraction</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#decimal</li>
+<li>Added: FunctionalDataProperty FunctionalDataProperty(&lt;http://www.owl-ontologies.com/rito#attrRating&gt;)</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#averagePrice">http://www.owl-ontologies.com/rito#averagePrice</a>
+<ul>
+<li>Added: Domain http://www.owl-ontologies.com/rito#Transport</li>
+<li>Added: FunctionalDataProperty FunctionalDataProperty(&lt;http://www.owl-ontologies.com/rito#averagePrice&gt;)</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#decimal</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#cityId">http://www.owl-ontologies.com/rito#cityId</a>
+<ul>
+<li>Added: Domain http://www.owl-ontologies.com/rito#City</li>
+<li>Added: FunctionalDataProperty FunctionalDataProperty(&lt;http://www.owl-ontologies.com/rito#cityId&gt;)</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#int</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#cityName">http://www.owl-ontologies.com/rito#cityName</a>
+<ul>
+<li>Added: Domain http://www.owl-ontologies.com/rito#City</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+<li>Added: FunctionalDataProperty FunctionalDataProperty(&lt;http://www.owl-ontologies.com/rito#cityName&gt;)</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#company">http://www.owl-ontologies.com/rito#company</a>
+<ul>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+<li>Added: Domain http://www.owl-ontologies.com/rito#Transport</li>
+<li>Added: FunctionalDataProperty FunctionalDataProperty(&lt;http://www.owl-ontologies.com/rito#company&gt;)</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#eventDate">http://www.owl-ontologies.com/rito#eventDate</a>
+<ul>
+<li>Added: FunctionalDataProperty FunctionalDataProperty(&lt;http://www.owl-ontologies.com/rito#eventDate&gt;)</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#dateTime</li>
+<li>Added: Domain http://www.owl-ontologies.com/rito#Event</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#eventId">http://www.owl-ontologies.com/rito#eventId</a>
+<ul>
+<li>Added: FunctionalDataProperty FunctionalDataProperty(&lt;http://www.owl-ontologies.com/rito#eventId&gt;)</li>
+<li>Added: Domain http://www.owl-ontologies.com/rito#Event</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#int</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#eventName">http://www.owl-ontologies.com/rito#eventName</a>
+<ul>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+<li>Added: Domain http://www.owl-ontologies.com/rito#Event</li>
+<li>Added: FunctionalDataProperty FunctionalDataProperty(&lt;http://www.owl-ontologies.com/rito#eventName&gt;)</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#hotelId">http://www.owl-ontologies.com/rito#hotelId</a>
+<ul>
+<li>Added: FunctionalDataProperty FunctionalDataProperty(&lt;http://www.owl-ontologies.com/rito#hotelId&gt;)</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#int</li>
+<li>Added: Domain http://www.owl-ontologies.com/rito#Hotel</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#hotelName">http://www.owl-ontologies.com/rito#hotelName</a>
+<ul>
+<li>Added: Domain http://www.owl-ontologies.com/rito#Hotel</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+<li>Added: FunctionalDataProperty FunctionalDataProperty(&lt;http://www.owl-ontologies.com/rito#hotelName&gt;)</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#hotelPrice">http://www.owl-ontologies.com/rito#hotelPrice</a>
+<ul>
+<li>Added: Domain http://www.owl-ontologies.com/rito#Hotel</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#int</li>
+<li>Added: FunctionalDataProperty FunctionalDataProperty(&lt;http://www.owl-ontologies.com/rito#hotelPrice&gt;)</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#hotelRating">http://www.owl-ontologies.com/rito#hotelRating</a>
+<ul>
+<li>Added: Domain http://www.owl-ontologies.com/rito#Hotel</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#float</li>
+<li>Added: FunctionalDataProperty FunctionalDataProperty(&lt;http://www.owl-ontologies.com/rito#hotelRating&gt;)</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#location">http://www.owl-ontologies.com/rito#location</a>
+<ul>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+<li>Added: FunctionalDataProperty FunctionalDataProperty(&lt;http://www.owl-ontologies.com/rito#location&gt;)</li>
+<li>Added: Domain http://www.owl-ontologies.com/rito#City</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#restName">http://www.owl-ontologies.com/rito#restName</a>
+<ul>
+<li>Added: Domain http://www.owl-ontologies.com/rito#Restaurant</li>
+<li>Added: FunctionalDataProperty FunctionalDataProperty(&lt;http://www.owl-ontologies.com/rito#restName&gt;)</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#restPrice">http://www.owl-ontologies.com/rito#restPrice</a>
+<ul>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#int</li>
+<li>Added: Domain http://www.owl-ontologies.com/rito#Restaurant</li>
+<li>Added: FunctionalDataProperty FunctionalDataProperty(&lt;http://www.owl-ontologies.com/rito#restPrice&gt;)</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#restRating">http://www.owl-ontologies.com/rito#restRating</a>
+<ul>
+<li>Added: Domain http://www.owl-ontologies.com/rito#Restaurant</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#decimal</li>
+<li>Added: FunctionalDataProperty FunctionalDataProperty(&lt;http://www.owl-ontologies.com/rito#restRating&gt;)</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#restiid">http://www.owl-ontologies.com/rito#restiid</a>
+<ul>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#int</li>
+<li>Added: Domain http://www.owl-ontologies.com/rito#Restaurant</li>
+<li>Added: FunctionalDataProperty FunctionalDataProperty(&lt;http://www.owl-ontologies.com/rito#restiid&gt;)</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#stars">http://www.owl-ontologies.com/rito#stars</a>
+<ul>
+<li>Added: Domain http://www.owl-ontologies.com/rito#Hotel</li>
+<li>Added: FunctionalDataProperty FunctionalDataProperty(&lt;http://www.owl-ontologies.com/rito#stars&gt;)</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#int</li>
+</ul>
+</li>
+<li><a href="#http://www.owl-ontologies.com/rito#tranId">http://www.owl-ontologies.com/rito#tranId</a>
+<ul>
+<li>Added: Domain http://www.owl-ontologies.com/rito#Transport</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#int</li>
+<li>Added: FunctionalDataProperty FunctionalDataProperty(&lt;http://www.owl-ontologies.com/rito#tranId&gt;)</li>
+</ul>
+</li>
+</ul></details><details><summary><u>Deleted data properties</u></summary>
+<ul><li><a href="#https://w3id.org/example#foundedIn">https://w3id.org/example#foundedIn</a>
+</li>
+</ul></details></div>
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>
